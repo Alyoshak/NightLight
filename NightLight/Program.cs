@@ -13,33 +13,32 @@ namespace NightLight
         static void Main(string[] args)
         {
             ZoneController zone1 = new ZoneController(1, "192.168.0.7");
-            zone1.On();
+            Thread.Sleep(DateTime.Parse("1/30/2015 6:40") - DateTime.Now);
             ZoneStateRunner runner = new ZoneStateRunner(zone1,
                 new List<ZoneState>{
                     new ZoneState(){
+                        On=true,
                         Brightness=0,
-                        Color=0,
-                        DayOfWeek=DayOfWeek.Friday,
-                        Time=DateTime.Now.AddMinutes(-1).TimeOfDay
-                    },
-                    new ZoneState(){
-
-                        Brightness=24,
                         Color=255,
                         DayOfWeek=DayOfWeek.Friday,
-                        Time=DateTime.Now.AddMinutes(2).TimeOfDay
-
+                        Time=new TimeSpan(6,40,0)
+                    },
+                    new ZoneState(){
+                        Off=true,
+                        Brightness=24,
+                        Color=180,
+                        DayOfWeek=DayOfWeek.Friday,
+                        Time=new TimeSpan(7,30,0)
                     }
                 });
 
-            for (int i = 0; i < 120; i++)
+            while (DateTime.Now < DateTime.Parse("1/30/2015 7:30"))
             {
                 runner.Run();
-                Thread.Sleep(1000);
+                Thread.Sleep(6000);
 
             }
            
-                zone1.Off();
         }
 
        

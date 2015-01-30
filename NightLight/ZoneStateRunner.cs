@@ -19,6 +19,7 @@ namespace NightLight
         }
         public void Run()
         {
+
             if (_States.Count > 0)
             {
                 if(_States.Count == 1)
@@ -52,11 +53,12 @@ namespace NightLight
                         nextIndex = 0;
                     }
                 }
-                var nextState = sortedStates[nextIndex];
-                var previousState = sortedStates[previousIndex];
+                 var nextState = sortedStates[nextIndex];
+                 var previousState = sortedStates[previousIndex];
 
                 var newZoneState = GenerateTransitionState(previousState, nextState, dateTimeNow);
                 ApplyState(newZoneState);
+                
 
             }
 
@@ -71,7 +73,9 @@ namespace NightLight
             return new ZoneState()
             {
                 Brightness = GetTransitionValue(start.Brightness, end.Brightness, transitionPercentage),
-                Color = GetTransitionValue(start.Color, end.Color, transitionPercentage)
+                Color = GetTransitionValue(start.Color, end.Color, transitionPercentage),
+                On=start.On,
+                Off=start.Off
                 
             };
         }
