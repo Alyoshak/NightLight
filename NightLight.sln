@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightLight", "NightLight\NightLight.csproj", "{AC4F767E-092F-4559-A647-B4355822D0F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightLight.Tests", "NightLight.Tests\NightLight.Tests.csproj", "{8BE044F3-071B-44E8-88FF-7812DF50C7C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AC4F767E-092F-4559-A647-B4355822D0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC4F767E-092F-4559-A647-B4355822D0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC4F767E-092F-4559-A647-B4355822D0F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE044F3-071B-44E8-88FF-7812DF50C7C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE044F3-071B-44E8-88FF-7812DF50C7C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE044F3-071B-44E8-88FF-7812DF50C7C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE044F3-071B-44E8-88FF-7812DF50C7C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
